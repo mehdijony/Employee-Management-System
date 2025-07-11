@@ -1,0 +1,88 @@
+<div class="col-md-6 offset-md-3">
+  <h3>Create Employee</h3>
+  <form (ngSubmit)="onSubmit()" #employeeForm="ngForm" novalidate>
+    <div class="form-group">
+      <label>Employee ID</label>
+      <input
+        type="text"
+        class="form-control"
+        id="employeeId"
+        required
+        minlength="1"
+        [(ngModel)]="employee.employeeId"
+        name="employeeId"
+        #name="ngModel"
+      />
+    </div>
+    <div class="form-group">
+      <label> First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        required
+        minlength="4"
+        [(ngModel)]="employee.firstName"
+        name="firstName"
+        #name="ngModel"
+      />
+    </div>
+
+    <div class="form-group">
+      <label> Last Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="lastName"
+        [(ngModel)]="employee.lastName"
+        name="lastName"
+      />
+    </div>
+
+    <div class="form-group">
+      <label> Title</label>
+      <input
+        type="text"
+        class="form-control"
+        id="title"
+        [(ngModel)]="employee.title"
+        name="title"
+      />
+    </div>
+
+    <div class="form-group">
+      <label> Division</label>
+      <input
+        type="text"
+        class="form-control"
+        id="division"
+        [(ngModel)]="employee.division"
+        name="division"
+      />
+    </div>
+
+    <div class="form-group">
+      <label> Building</label>
+      <input
+        type="text"
+        class="form-control"
+        id="building"
+        [(ngModel)]="employee.building"
+        name="building"
+      />
+    </div>
+    
+    <div class="form-group">
+      <label> Room</label>
+      <input
+        type="text"
+        class="form-control"
+        id="room"
+        [(ngModel)]="employee.room"
+        name="room"
+      />
+    </div>
+
+    <button class="btn btn-success my-3" type="submit">Submit</button>
+  </form>
+</div>
